@@ -243,33 +243,34 @@ footer p {
 	}
 
 	#menu > li > a + div {
-	    background-color: rgb(117, 28, 28);
-	    border-radius: 0 0 2px 2px;
-	    display: none;
-	    position: absolute;
 	    width: 143%;
 	}
 
 	#menu > li > a {
 		font-size: 0.8rem;
-	    display: block;
-	    color: rgb(255, 255, 255);
 	    line-height: 2.5rem;
 	}
 
 	#slide > div > h1 {
 	    font-size: 1.4rem;
-	    padding-bottom: 0.5rem;
-	    border-bottom: 2px solid #3CA8F0;
-	    margin-bottom: 0.5rem;
+	}
+
+	body {
+		min-height: 100vh;
+		/*background-color: rgb(212, 135, 97);*/
+	}
+
+	footer {
+		margin-top: auto;
+	}
+}
+
+@media screen and (max-width: 48em) {
+	#slide > div > h1 {
+		font-size: 1.2rem;
 	}
 
 	/*body {
-		background-color: rgb(212, 135, 97);
+		background-color: rgb(137, 212, 97);
 	}*/
 }
-
-/*@media screen and (max-width: 48em) {
-	body {
-		background-color: rgb(137, 212, 97);
-}*/

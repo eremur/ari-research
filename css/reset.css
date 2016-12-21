@@ -12,5 +12,12 @@ html {
     box-sizing: inherit;
 }
 
+img, audio, video, iframe, canvas, svg, picture {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
 a {text-decoration: none;}
+
 ul {list-style-type: none;}

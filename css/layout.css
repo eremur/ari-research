@@ -1,27 +1,246 @@
-.d-flex {display: flex;}
-.f-row {flex-direction: row;}
-.f-column {flex-direction: column;}
-.no-wrap {flex-wrap: nowrap;}
-.wrap {flex-wrap: wrap;}
+/*FLOAT TECHNIQUE-------------------------------------------------------------------*/
+.floatl { float: left; }
+.floatr { float: right; }
+.nofloat { float: none; }
 
-/*MAIN AXIS (Justify Content)----------------------------------------------------*/
-.j-star {justify-content: flex-start;}
-.j-center {justify-content: center;}
-.j-between {justify-content: space-between;}
-.j-around {justify-content: space-around;}
-.j-end {justify-content: flex-end;}
+/*Clear.....................................................*/
+.clear, .clear::after, .clear::before { clear: both; }
+.clear::after, .clear::before {
+	content: '';
+	display: block;
+}
 
-/*NO-WRAP CROSS AXIS (Align-Items)------------------------------------------------*/
-.ai-star {align-items: flex-start;}
-.ai-center {align-items: center;}
-.ai-baseline {align-items: baseline;}
-.ai-stretch {align-items: stretch;}
-.ai-end {align-items: flex-end;}
 
-/*WRAP CROSS AXIS (Align-Content)-------------------------------------------------*/
-.ac-star {align-content: flex-start;}
-.ac-center {align-content: center;}
-.ac-between {align-content: space-between;}
-.ac-around {align-content: space-around;}
-.ac-stretch {align-content: stretch;}
-.ac-end {align-content: flex-end;}
+
+/*INLINE-BLOCK TECHNIQUE-------------------------------------------------------------*/
+
+.i-b { display: inline-block; }
+
+/* Vertical & Horizontal Alignments...........................*/
+.v-top { vertical-align: top; }
+.v-middle { vertical-align: middle; }
+.v-bottom { vertical-align: bottom; }
+.v-baseline { vertical-align: baseline; }
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+/* Font Sizes..................................................*/
+.f0 { font-size: 0; }
+
+
+
+/* FLEX TECHNIQUE---------------------------------------------------------------------*/
+.flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flex-inline {
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+}
+
+
+/* Flex Direction..............................*/
+.flex-row {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.flex-row-reverse {
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+}
+
+.flex-column {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.flex-column-reverse {
+	-webkit-flex-direction: column-reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+}
+
+
+/* Font Wrap-Nowrap.............................*/
+.flex-nowrap {
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+.flex-wrap {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+	-webkit-flex-wrap: wrap-reverse;
+	-ms-flex-wrap: wrap-reverse;
+	flex-wrap: wrap-reverse;
+}
+
+
+/* MAIN AXIS (Justify Content).................*/
+.jc-flex-start {
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+.jc-flex-end {
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.jc-center {
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.jc-space-between {
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.jc-space-around {
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
+
+/* NO-WRAP CROSS AXIS (Align-Items)............*/
+.ai-flex-start {
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.ai-flex-end {
+	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+
+.ai-center {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.ai-baseline {
+	-webkit-align-items: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+}
+
+.ai-stretch {
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+
+/* WRAP CROSS AXIS (Align-Content)..............*/
+.ac-flex-start {
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+}
+
+.ac-flex-end {
+	-webkit-align-content: flex-end;
+	-ms-flex-line-pack: end;
+	align-content: flex-end;
+}
+
+.ac-center {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+
+.ac-space-between {
+	-webkit-align-content: space-between;
+	-ms-flex-line-pack: justify;
+	align-content: space-between;
+}
+
+.ac-space-around {
+	-webkit-align-content: space-around;
+	-ms-flex-line-pack: justify;
+	align-content: space-around;
+}
+
+.ac-stretch {
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+}
+
+
+/* Flex Auto-None...............................*/
+.flex-none {
+	-ms-flex: none;
+	-webkit-flex: none;
+	flex: none;
+}
+
+.flex-auto {
+	-ms-flex: auto;
+	-webkit-flex: auto;
+	flex: auto;
+}
+
+
+/* Align Self...................................*/
+.as-flex-start {
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+.as-flex-end {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+.as-center {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+.as-baseline {
+	-webkit-align-self: baseline;
+	-ms-flex-item-align: baseline;
+	align-self: baseline;
+}
+
+.as-stretch {
+	-webkit-align-self: stretch;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+}
+
+.as-auto {
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}

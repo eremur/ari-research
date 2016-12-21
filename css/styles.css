@@ -1,6 +1,22 @@
+.container, .container-full {
+	width: 100%;
+	margin: auto;
+	/*font-size: 0;*/
+}
+
+.container { max-width: 1170px; }
+
+/*.item {
+	display: block;
+	width: 100%;
+	padding: 16px;
+	padding: 1rem;
+	font-size: 16px;
+	font-size: 1rem;
+}*/
+
 /*LANGUAJES-----------------------------------------------------------------*/
 #languajes{
-    width: 1170px;
     height: 35px;
     text-align: right;
     line-height: 2.5rem;
@@ -22,64 +38,62 @@
 /*HEADER IMAGE-----------------------------------------------------------------*/
 #header {
     background-color: #004a91;
-    height: 380px;
+    max-height: 380px;
+	height: 100%;
     border-top: 2px solid rgb(15, 15, 15);
     border-bottom: 2px solid rgb(15, 15, 15);
 }
 
 #header-texture {
     width: 1550px;
-    height: 378px;
+    max-height: 380px;
 
     background-image: url("../imagenes-ari/header-texture.png");
     background-size: 100% 100%;
 }
 
 #header-content {
-    width: 1170px;
-    height: 100%;
     margin: 0 auto;
     /*border: thin solid white;*/
 }
 
-#header-logo {
-    width: 95%;
-    padding-top: 1.2rem;
+#header-content > figure {
+	width: 32.3%;
+	/*border: thin solid white;*/
 }
 
 #header-logo-people {
-    width: 67,1794871795%;
-    height: 100%;
-    /*background-color: rgba(250, 227, 172, 0.55);*/
-
+    width: 67.7%;
+	/*border: thin solid black;*/
 }
 
-#header-heart {
-    width: 32,8205128205%;
-    height: 100%;
+#header-logo {
+    width: 75%;
+    padding-top: 2rem;
 }
 
 #header-people {
-    width: 100%;
     opacity: 0.7;
+}
+
+#header-people > img {
+    display: block;
 }
 
 /*MENU IMAGE-----------------------------------------------------------------*/
 #menu {
-    width: 1170px;
     margin: 0 auto;
     background-color: rgb(175, 56, 56);
 }
 
 #menu > li {
-    flex: auto;
     position: relative;
     text-align: center;
     border-right: 1px solid rgb(255, 255, 255);
 }
 
 #menu > li:last-child {
-    border-right: none;
+    border-right: none
 }
 
 #menu > li > a {
@@ -88,7 +102,7 @@
     line-height: 3rem;
 }
 
-#menu > li > a:hover {
+#menu > li:hover {
     background-color: rgba(93, 22, 22, 0.62);
     transition: 1s;
 }
@@ -121,7 +135,6 @@
 
 /*DESCRIPTION-----------------------------------------------------------------*/
 #description {
-    width: 1170px;
     padding: 2rem 3rem;
     margin: 2.6rem auto;
     border-bottom: thin dashed rgb(175, 56, 56);
@@ -148,39 +161,29 @@
 }
 
 /*SLIDE IMAGES--------------------------------------------------------------------*/
-#slide {
-    width: 1170px;
-    margin: auto;
-    /*background-color: rgb(255, 252, 210);*/
-    /*padding: 1rem;*/
-}
-
 #slide > div {
-    width: calc((100% - 7%) / 2);
-    margin-bottom: 3%;
-    /*background-color: rgba(8, 4, 6, 0.4);*/
+	width: calc((100% - 7%) / 2);
+	margin-bottom: 3%;
+	/*border: thin solid black;*/
 }
 
-#slide div h1 {
-    /*text-align: center;*/
+#slide > div > figure {
+	max-height: 302px;
+}
+
+#slide > div > figure >img {
+	display: block;
+	height: 100%;
+	border: 1px solid rgb(1, 1, 1);
+    box-shadow: 3px 3px 3px #888888,
+                -3px 0px 3px #888888;
+}
+
+#slide > div > h1 {
     font-size: 1.6rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #3CA8F0;
-    margin-bottom: 0.6rem;
-}
-
-.tematica > div {
-    width: 100%;
-    height: 302px;
-    /*background-color: rgb(157, 204, 34);*/
-}
-
-.tematica > div > img {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgb(1, 1, 1);
-    box-shadow: 3px 3px 3px #888888,
-                -3px 0px 3px #888888;
+    margin-bottom: 0.5rem;
 }
 
 /*FOOTER---------------------------------------------------------------------------*/
@@ -215,3 +218,51 @@ footer p {
     font-size: 0.8rem;
     color: #bee5ff;
 }
+
+
+/*MEDIA QUERIES--------------------------------------------------------------------*/
+@media screen and (max-width: 64em) {
+	nav, #languajes, #slide {
+		width: 95%;
+		margin: auto;
+	}
+
+	#languajes a {
+	    font-size: 0.8rem;
+	    margin-left: 1.6rem;
+	    color: #3CA8F0;
+	}
+
+	#menu >li > a + div > ul > li > a {
+	    display: block;
+	    color: rgb(255, 255, 255);
+	    line-height: 2.2rem;
+	    text-transform: uppercase;
+	    font-size: 0.65rem;
+	    border-top: thin solid rgb(255, 255, 255);
+	}
+
+	#menu > li > a + div {
+	    background-color: rgb(117, 28, 28);
+	    border-radius: 0 0 2px 2px;
+	    display: none;
+	    position: absolute;
+	    width: 143%;
+	}
+
+	#menu > li > a {
+		font-size: 0.8rem;
+	    display: block;
+	    color: rgb(255, 255, 255);
+	    line-height: 2.5rem;
+	}
+
+	/*body {
+		background-color: rgb(212, 135, 97);
+	}*/
+}
+
+/*@media screen and (max-width: 48em) {
+	body {
+		background-color: rgb(137, 212, 97);
+}*/
